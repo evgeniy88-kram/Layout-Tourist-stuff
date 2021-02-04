@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&display=swap');
+
+$mainFont: 'Mukta', sans-serif;
+$mainTxtColor: #000000;
+$secTxtColor: #ffffff;
+$btnColor: #3ACDD5;
+
+@mixin flexCentrCentr () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0 auto !important;
+  max-width: 1920px;
+  box-shadow: 0 0 5px 5px #cccccc;
+  color: $mainTxtColor;
+}
+.header {
+  background: url("../img/header_bg.jpg") no-repeat;
+  height: 1300px;
+  position: relative;
+  &__logo {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  svg {
+    position: absolute;
+    top: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  svg {
+    right: 200px;
+  }
+  svg + svg {
+    right: 100px;
+  }
+  &__navigation {
+    nav {
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 50%;
+      a {
+        text-decoration: none;
+        color: $mainTxtColor;
+        font-family: $mainFont;
+        font-weight: 700;
+        font-size: 23px;
+      }
+    }
+  }
+  h3 {
+    color: $mainTxtColor;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: center;
+    margin: 60px 0 0;
+  }
+  h2 {
+    color: $secTxtColor;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 175px;
+    text-align: center;
+    margin: 0;
+  }
+  &__info {
+    margin: 350px 0 0 200px;
+    p {
+      color: $mainTxtColor;
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 80px;
+      margin: 0;
+    }
+    p + p {
+      font-weight: 300;
+      font-size: 90px;
+      margin: 0;
+    }
+    p + p + p {
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 42px;
+      margin: 40px 0 30px;
+    }
+    &__button {
+      width: 300px;
+      height: 80px;
+      border-radius: 30px;
+      color: $secTxtColor;
+      @include flexCentrCentr;
+      background: $btnColor;
+      font-size: 32px;
+      font-family: $mainFont;
+      font-weight: 500;
+    }
+  }
+}
+.bags {
+  article {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 68px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  p {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 42px;
+    margin: 50px 0 80px;
+  }
+&__grid {
+  width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px 600px 400px;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h4 {
+      text-align: center;
+      width: 80%;
+      font-family: $mainFont;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    div {
+      @include flexCentrCentr;
+      height: 50px;
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: $btnColor;
+      }
+      span {
+        font-family: $mainFont;
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+  &__btn {
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    color: $secTxtColor;
+    @include flexCentrCentr;
+    background: $btnColor;
+    font-size: 32px;
+    font-family: $mainFont;
+    font-weight: 500;
+    margin: 50px auto 20px;
+  }
+}
+.camps {
+  article {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 68px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  p {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 42px;
+  }
+  &__content {
+    width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 400px 510px 570px;
+    gap: 10px;
+    &__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h4 {
+        text-align: center;
+        width: 80%;
+        font-family: $mainFont;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      div {
+        @include flexCentrCentr;
+        height: 50px;
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $btnColor;
+        }
+        span {
+          font-family: $mainFont;
+          font-size: 20px;
+          font-weight: 700;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    color: $secTxtColor;
+    @include flexCentrCentr;
+    background: $btnColor;
+    font-size: 32px;
+    font-family: $mainFont;
+    font-weight: 500;
+    margin: 50px auto 20px;
+  }
+}
+.cameras {
+  article {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 68px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  p {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 42px;
+  }
+  &__slider {
+    width: 1600px;
+    margin: 0 auto;
+    &__item {
+      height: 700px;
+      width: 500px;
+      img {
+        margin: 0 auto;
+      }
+      .img3 {
+        margin: 100px 0 110px;
+      }
+      h4, div {
+        margin: 0 auto;
+      }
+      h4 {
+        text-align: center;
+        width: 80%;
+        font-family: $mainFont;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      div {
+        @include flexCentrCentr;
+        height: 50px;
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $btnColor;
+        }
+        span {
+          font-family: $mainFont;
+          font-size: 20px;
+          font-weight: 700;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    color: $secTxtColor;
+    @include flexCentrCentr;
+    background: $btnColor;
+    font-size: 32px;
+    font-family: $mainFont;
+    font-weight: 500;
+    margin: 50px auto 20px;
+  }
+}
+.lens {
+  article {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 68px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  p {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 42px;
+  }
+  &__slider {
+    width: 1000px;
+    margin: 0 auto;
+    &__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img {
+        margin: 0 auto;
+      }
+      h4 {
+        text-align: center;
+        width: 80%;
+        font-family: $mainFont;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 50px auto 20px;
+      }
+      div {
+        @include flexCentrCentr;
+        height: 50px;
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $btnColor;
+        }
+        span {
+          font-family: $mainFont;
+          font-size: 20px;
+          font-weight: 700;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    color: $secTxtColor;
+    @include flexCentrCentr;
+    background: $btnColor;
+    font-size: 32px;
+    font-family: $mainFont;
+    font-weight: 500;
+    margin: 50px auto 20px;
+  }
+}
+.sign {
+  background: url("../img/sign_bg.jpg") no-repeat;
+  height: 1140px;
+  &__info {
+    margin: 250px 0 0 50px;
+    p {
+    color: $mainTxtColor;
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 80px;
+    margin: 50px 0 20px;
+    }
+    p + p {
+    font-weight: 300;
+    font-size: 90px;
+    margin: 50px 0 20px;
+    }
+    p + p + p {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 42px;
+    margin: 50px 0 20px;
+    }
+  }
+}

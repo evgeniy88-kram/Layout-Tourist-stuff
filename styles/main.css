@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&display=swap");
+body {
+  margin: 0 auto !important;
+  max-width: 1920px;
+  box-shadow: 0 0 5px 5px #cccccc;
+  color: #000000;
+}
+
+.header {
+  background: url("../img/header_bg.jpg") no-repeat;
+  height: 1300px;
+  position: relative;
+}
+.header__logo {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header svg {
+  position: absolute;
+  top: 60px;
+  width: 40px;
+  height: 40px;
+}
+.header svg {
+  right: 200px;
+}
+.header svg + svg {
+  right: 100px;
+}
+.header__navigation nav {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+.header__navigation nav a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+}
+.header h3 {
+  color: #000000;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  text-align: center;
+  margin: 60px 0 0;
+}
+.header h2 {
+  color: #ffffff;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-size: 175px;
+  text-align: center;
+  margin: 0;
+}
+.header__info {
+  margin: 350px 0 0 200px;
+}
+.header__info p {
+  color: #000000;
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  margin: 0;
+}
+.header__info p + p {
+  font-weight: 300;
+  font-size: 90px;
+  margin: 0;
+}
+.header__info p + p + p {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 42px;
+  margin: 40px 0 30px;
+}
+.header__info__button {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+}
+
+.bags article {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+}
+.bags p {
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+  margin: 50px 0 80px;
+}
+.bags__grid {
+  width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px 600px 400px;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+}
+.bags__grid__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.bags__grid__item h4 {
+  text-align: center;
+  width: 80%;
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.bags__grid__item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.bags__grid__item div svg {
+  width: 30px;
+  height: 30px;
+  fill: #3ACDD5;
+}
+.bags__grid__item div span {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.bags__btn {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  margin: 50px auto 20px;
+}
+
+.camps article {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+}
+.camps p {
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+}
+.camps__content {
+  width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px 510px 570px;
+  gap: 10px;
+}
+.camps__content__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.camps__content__item h4 {
+  text-align: center;
+  width: 80%;
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.camps__content__item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.camps__content__item div svg {
+  width: 30px;
+  height: 30px;
+  fill: #3ACDD5;
+}
+.camps__content__item div span {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.camps__btn {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  margin: 50px auto 20px;
+}
+
+.cameras article {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+}
+.cameras p {
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+}
+.cameras__slider {
+  width: 1600px;
+  margin: 0 auto;
+}
+.cameras__slider__item {
+  height: 700px;
+  width: 500px;
+}
+.cameras__slider__item img {
+  margin: 0 auto;
+}
+.cameras__slider__item .img3 {
+  margin: 100px 0 110px;
+}
+.cameras__slider__item h4, .cameras__slider__item div {
+  margin: 0 auto;
+}
+.cameras__slider__item h4 {
+  text-align: center;
+  width: 80%;
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.cameras__slider__item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.cameras__slider__item div svg {
+  width: 30px;
+  height: 30px;
+  fill: #3ACDD5;
+}
+.cameras__slider__item div span {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.cameras__btn {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  margin: 50px auto 20px;
+}
+
+.lens article {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+}
+.lens p {
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+}
+.lens__slider {
+  width: 1000px;
+  margin: 0 auto;
+}
+.lens__slider__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lens__slider__item img {
+  margin: 0 auto;
+}
+.lens__slider__item h4 {
+  text-align: center;
+  width: 80%;
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 50px auto 20px;
+}
+.lens__slider__item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.lens__slider__item div svg {
+  width: 30px;
+  height: 30px;
+  fill: #3ACDD5;
+}
+.lens__slider__item div span {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.lens__btn {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  margin: 50px auto 20px;
+}
+
+.sign {
+  background: url("../img/sign_bg.jpg") no-repeat;
+  height: 1140px;
+}
+.sign__info {
+  margin: 250px 0 0 50px;
+}
+.sign__info p {
+  color: #000000;
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  margin: 50px 0 20px;
+}
+.sign__info p + p {
+  font-weight: 300;
+  font-size: 90px;
+  margin: 50px 0 20px;
+}
+.sign__info p + p + p {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 42px;
+  margin: 50px 0 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
