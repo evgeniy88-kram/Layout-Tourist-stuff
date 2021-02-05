@@ -1,15 +1,110 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 auto !important;
   max-width: 1920px;
-  box-shadow: 0 0 5px 5px #cccccc;
-  color: #000000;
+}
+
+article {
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1100px) {
+  article {
+    font-size: 48px;
+    padding-top: 40px;
+  }
+}
+
+article + p {
+  font-family: "Signika", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+  margin: 50px 0 80px;
+}
+@media screen and (max-width: 1100px) {
+  article + p {
+    font-size: 18px;
+    margin: 30px 0 40px;
+  }
+}
+
+.content-btn {
+  width: 300px;
+  height: 80px;
+  margin: 50px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Signika", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #606060;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 1100px) {
+  .content-btn {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .content-btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .content-btn {
+    margin: 90px auto 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .content-btn {
+    width: 240px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .content-btn {
+    width: 180px;
+    height: 50px;
+  }
+}
+.content-btn:hover {
+  background: #ffffff;
+  color: #3ACDD5;
+}
+
+svg {
+  cursor: pointer;
 }
 
 .header {
   background: url("../img/header_bg.jpg") no-repeat;
-  height: 1300px;
+  background-size: cover;
   position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .header {
+    background: url("../img/header_bg-w1440.jpg") no-repeat;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header {
+    background: url("../img/header_bg-w1100.jpg") no-repeat;
+  }
 }
 .header__logo {
   padding-top: 30px;
@@ -17,62 +112,162 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 600px) {
+  .header__logo {
+    padding-top: 20px;
+    justify-content: flex-start;
+    margin-left: 25px;
+  }
+}
 .header svg {
   position: absolute;
   top: 60px;
+  right: 200px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
-.header svg {
-  right: 200px;
+@media screen and (max-width: 800px) {
+  .header svg {
+    right: 100px;
+    width: 35px;
+    height: 35px;
+  }
 }
 .header svg + svg {
   right: 100px;
+}
+@media screen and (max-width: 800px) {
+  .header svg + svg {
+    right: 40px;
+  }
 }
 .header__navigation nav {
   margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 50%;
+  width: 60%;
 }
 .header__navigation nav a {
+  position: relative;
   text-decoration: none;
   color: #000000;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 700;
   font-size: 23px;
 }
+@media screen and (max-width: 1100px) {
+  .header__navigation nav a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__navigation nav a {
+    font-size: 16px;
+  }
+}
+.header__navigation nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #000000;
+  transition: 0.5s ease;
+}
+.header__navigation nav a:hover::before {
+  width: 100%;
+}
 .header h3 {
-  color: #000000;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 500;
   font-size: 35px;
   text-align: center;
   margin: 60px 0 0;
 }
+@media screen and (max-width: 1100px) {
+  .header h3 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header h3 {
+    font-size: 14px;
+  }
+}
 .header h2 {
   color: #ffffff;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 500;
   font-size: 175px;
   text-align: center;
   margin: 0;
 }
+@media screen and (max-width: 1100px) {
+  .header h2 {
+    font-size: 125px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header h2 {
+    font-size: 90px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header h2 {
+    font-size: 50px;
+  }
+}
 .header__info {
   margin: 350px 0 0 200px;
 }
+@media screen and (max-width: 1100px) {
+  .header__info {
+    margin: 350px 0 0 100px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info {
+    margin: 450px 0 0 80px;
+  }
+}
 .header__info p {
-  color: #000000;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 700;
   font-size: 80px;
   margin: 0;
+}
+@media screen and (max-width: 1100px) {
+  .header__info p {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info p {
+    font-size: 40px;
+  }
 }
 .header__info p + p {
   font-weight: 300;
   font-size: 90px;
   margin: 0;
+}
+@media screen and (max-width: 1100px) {
+  .header__info p + p {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info p + p {
+    font-size: 50px;
+  }
 }
 .header__info p + p + p {
   font-weight: 300;
@@ -80,35 +275,60 @@ body {
   line-height: 42px;
   margin: 40px 0 30px;
 }
-.header__info__button {
+@media screen and (max-width: 1100px) {
+  .header__info p + p + p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info p + p + p {
+    font-size: 14px;
+  }
+}
+.header__info__btn {
   width: 300px;
   height: 80px;
   border-radius: 30px;
   color: #ffffff;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Signika", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #3ACDD5;
-  font-size: 32px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
+  box-shadow: 0 0 10px 2px #606060;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 1100px) {
+  .header__info__btn {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info__btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header__info__btn {
+    width: 240px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__info__btn {
+    width: 180px;
+    height: 50px;
+  }
+}
+.header__info__btn:hover {
+  background: #ffffff;
+  color: #3ACDD5;
 }
 
-.bags article {
-  font-family: "Mukta", sans-serif;
-  font-weight: 700;
-  font-size: 68px;
-  text-align: center;
-  padding-top: 100px;
-}
-.bags p {
-  font-family: "Mukta", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  line-height: 42px;
-  margin: 50px 0 80px;
-}
 .bags__grid {
   width: 1500px;
   margin: 0 auto;
@@ -116,6 +336,23 @@ body {
   grid-template-columns: 400px 600px 400px;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
+}
+@media screen and (max-width: 1500px) {
+  .bags__grid {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .bags__grid {
+    width: 710px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bags__grid {
+    width: 400px;
+  }
 }
 .bags__grid__item {
   display: flex;
@@ -125,9 +362,14 @@ body {
 .bags__grid__item h4 {
   text-align: center;
   width: 80%;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 15px;
   font-weight: 400;
+}
+@media screen and (max-width: 1100px) {
+  .bags__grid__item h4 {
+    font-size: 14px;
+  }
 }
 .bags__grid__item div {
   display: flex;
@@ -141,108 +383,69 @@ body {
   fill: #3ACDD5;
 }
 .bags__grid__item div span {
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin-right: 20px;
 }
-.bags__btn {
-  width: 300px;
-  height: 80px;
-  border-radius: 30px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3ACDD5;
-  font-size: 32px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
-  margin: 50px auto 20px;
-}
 
-.camps article {
-  font-family: "Mukta", sans-serif;
-  font-weight: 700;
-  font-size: 68px;
-  text-align: center;
-  padding-top: 100px;
-}
-.camps p {
-  font-family: "Mukta", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  line-height: 42px;
-}
-.camps__content {
+.camps__grid {
   width: 1500px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 400px 510px 570px;
   gap: 10px;
 }
-.camps__content__item {
+@media screen and (max-width: 1100px) {
+  .camps__grid {
+    width: 600px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.camps__grid__item {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.camps__content__item h4 {
+.camps__grid__item h4 {
   text-align: center;
   width: 80%;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
-.camps__content__item div {
+@media screen and (max-width: 1100px) {
+  .camps__grid__item h4 {
+    font-size: 14px;
+  }
+}
+.camps__grid__item div {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
 }
-.camps__content__item div svg {
+.camps__grid__item div svg {
   width: 30px;
   height: 30px;
   fill: #3ACDD5;
 }
-.camps__content__item div span {
-  font-family: "Mukta", sans-serif;
+.camps__grid__item div span {
+  font-family: "Signika", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin-right: 20px;
 }
-.camps__btn {
-  width: 300px;
-  height: 80px;
-  border-radius: 30px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3ACDD5;
-  font-size: 32px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
-  margin: 50px auto 20px;
-}
 
-.cameras article {
-  font-family: "Mukta", sans-serif;
-  font-weight: 700;
-  font-size: 68px;
-  text-align: center;
-  padding-top: 100px;
-}
-.cameras p {
-  font-family: "Mukta", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  line-height: 42px;
-}
 .cameras__slider {
   width: 1600px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .cameras__slider {
+    width: 550px;
+  }
 }
 .cameras__slider__item {
   height: 700px;
@@ -254,15 +457,17 @@ body {
 .cameras__slider__item .img3 {
   margin: 100px 0 110px;
 }
-.cameras__slider__item h4, .cameras__slider__item div {
+.cameras__slider__item div, .cameras__slider__item h4 {
   margin: 0 auto;
 }
 .cameras__slider__item h4 {
   text-align: center;
   width: 80%;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 15px;
   font-weight: 400;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .cameras__slider__item div {
   display: flex;
@@ -276,43 +481,25 @@ body {
   fill: #3ACDD5;
 }
 .cameras__slider__item div span {
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin-right: 20px;
 }
-.cameras__btn {
-  width: 300px;
-  height: 80px;
-  border-radius: 30px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3ACDD5;
-  font-size: 32px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
-  margin: 50px auto 20px;
-}
 
-.lens article {
-  font-family: "Mukta", sans-serif;
-  font-weight: 700;
-  font-size: 68px;
-  text-align: center;
-  padding-top: 100px;
-}
-.lens p {
-  font-family: "Mukta", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  line-height: 42px;
-}
 .lens__slider {
   width: 1000px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1100px) {
+  .lens__slider {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .lens__slider {
+    width: 400px;
+  }
 }
 .lens__slider__item {
   display: flex;
@@ -322,10 +509,15 @@ body {
 .lens__slider__item img {
   margin: 0 auto;
 }
+@media screen and (max-width: 800px) {
+  .lens__slider__item img {
+    width: 350px;
+  }
+}
 .lens__slider__item h4 {
   text-align: center;
   width: 80%;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 15px;
   font-weight: 400;
   margin: 50px auto 20px;
@@ -342,24 +534,10 @@ body {
   fill: #3ACDD5;
 }
 .lens__slider__item div span {
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin-right: 20px;
-}
-.lens__btn {
-  width: 300px;
-  height: 80px;
-  border-radius: 30px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3ACDD5;
-  font-size: 32px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
-  margin: 50px auto 20px;
 }
 
 .sign {
@@ -367,25 +545,245 @@ body {
   height: 1140px;
 }
 .sign__info {
-  margin: 250px 0 0 50px;
+  padding-top: 450px;
+  margin: 0 0 0 230px;
+  width: 650px;
+  color: #ffffff;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info {
+    width: 400px;
+  }
 }
 .sign__info p {
-  color: #000000;
-  font-family: "Mukta", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 700;
-  font-size: 80px;
-  margin: 50px 0 20px;
+  font-size: 56px;
+  margin: 0;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info p {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info p {
+    font-size: 30px;
+  }
 }
 .sign__info p + p {
   font-weight: 300;
-  font-size: 90px;
-  margin: 50px 0 20px;
+  font-size: 52px;
+  margin: 0;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info p + p {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info p + p {
+    font-size: 24px;
+  }
 }
 .sign__info p + p + p {
   font-weight: 300;
-  font-size: 21px;
-  line-height: 42px;
-  margin: 50px 0 20px;
+  font-size: 17px;
+  line-height: 30px;
+  margin: 40px 0 50px;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info p + p + p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info p + p + p {
+    font-size: 12px;
+  }
+}
+.sign__info__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign__info__form input {
+  width: 370px;
+  height: 70px;
+  outline: none;
+  border: none;
+  border-radius: 36px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info__form input {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info__form input {
+    font-size: 12px;
+    width: 240px;
+    height: 50px;
+  }
+}
+.sign__info__form input::placeholder {
+  font-family: "Signika", sans-serif;
+}
+.sign__info__form__btn {
+  width: 200px;
+  height: 70px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #3ACDD5;
+  font-size: 32px;
+  font-family: "Signika", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px #ffffff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 1100px) {
+  .sign__info__form__btn {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign__info__form__btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sign__info__form__btn {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sign__info__form__btn {
+    width: 100px;
+    height: 50px;
+  }
+}
+.sign__info__form__btn:hover {
+  background: #ffffff;
+  color: #3ACDD5;
+}
+
+.footer {
+  height: 700px;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    height: 600px;
+  }
+}
+.footer__info {
+  width: 1400px;
+  padding-top: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1600px) {
+  .footer__info {
+    width: 1100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__info {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__info {
+    width: 450px;
+  }
+}
+.footer__info__item {
+  display: flex;
+  flex-direction: column;
+}
+.footer__info__item h3 {
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0 0 30px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__info__item h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__info__item h3 {
+    font-size: 24px;
+  }
+}
+.footer__info__item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer__info__item div a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Signika", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 10px 0;
+}
+@media screen and (max-width: 1200px) {
+  .footer__info__item div a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__info__item div a {
+    font-size: 14px;
+  }
+}
+.footer p {
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 50px 0 40px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .footer p {
+    font-size: 18px;
+  }
+}
+.footer__social {
+  margin: 30px 0;
+  text-align: center;
+}
+.footer__social svg {
+  fill: #606060;
+  margin: 0 20px;
+}
+.footer__social a:nth-child(1) svg:hover {
+  fill: #0B84ED;
+}
+.footer__social a:nth-child(2) svg:hover {
+  fill: #D73184;
+}
+.footer__social a:nth-child(3) svg:hover {
+  fill: #0A66C2;
+}
+.footer__social a:nth-child(4) svg:hover {
+  fill: #148AC5;
 }
 
 /*# sourceMappingURL=main.css.map */

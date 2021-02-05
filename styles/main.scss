@@ -1,43 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&display=swap');
-
-$mainFont: 'Mukta', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;700&display=swap');
+$mainFont: 'Signika', sans-serif;
 $mainTxtColor: #000000;
 $secTxtColor: #ffffff;
 $btnColor: #3ACDD5;
+$effectColor: #606060;
 
 @mixin flexCentrCentr () {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@mixin btnProp () {
+  border-radius: 30px;
+  color: $secTxtColor;
+  background: $btnColor;
+  font-size: 32px;
+  font-family: $mainFont;
+  font-weight: 500;
+  cursor: pointer;
+  @media screen and (max-width: 1100px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+}
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0 auto !important;
   max-width: 1920px;
-  box-shadow: 0 0 5px 5px #cccccc;
-  color: $mainTxtColor;
+}
+article {
+  font-family: $mainFont;
+  font-weight: 700;
+  font-size: 68px;
+  text-align: center;
+  padding-top: 100px;
+  @media screen and (max-width: 1100px) {
+    font-size: 48px;
+    padding-top: 40px;
+  }
+}
+article + p {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  line-height: 42px;
+  margin: 50px 0 80px;
+  @media screen and (max-width: 1100px) {
+    font-size: 18px;
+    margin: 30px 0 40px;
+  }
+}
+.content-btn {
+  width: 300px;
+  height: 80px;
+  margin: 50px auto 20px;
+  @include flexCentrCentr;
+  @include btnProp;
+  box-shadow: 0 0 10px 2px $effectColor;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  @media screen and (max-width: 1600px) {
+    margin: 90px auto 20px;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 240px;
+    height: 60px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 180px;
+    height: 50px;
+  }
+  &:hover {
+    background: $secTxtColor;
+    color: $btnColor;
+  }
+}
+svg {
+  cursor: pointer;
 }
 .header {
   background: url("../img/header_bg.jpg") no-repeat;
-  height: 1300px;
+  background-size: cover;
+  //height: 1300px;
   position: relative;
+  @media screen and (max-width: 1440px) {
+    background: url("../img/header_bg-w1440.jpg") no-repeat;
+  }
+  @media screen and (max-width: 1100px) {
+    background: url("../img/header_bg-w1100.jpg") no-repeat;
+  }
   &__logo {
     padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 600px) {
+      padding-top: 20px;
+      justify-content: flex-start;
+      margin-left: 25px;
+    }
   }
   svg {
     position: absolute;
     top: 60px;
+    right: 200px;
     width: 40px;
     height: 40px;
-  }
-  svg {
-    right: 200px;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+      right: 100px;
+      width: 35px;
+      height: 35px;
+    }
   }
   svg + svg {
     right: 100px;
+    @media screen and (max-width: 800px) {
+      right: 40px;
+    }
   }
   &__navigation {
     nav {
@@ -45,23 +131,51 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 50%;
+      width: 60%;
       a {
+        position: relative;
         text-decoration: none;
         color: $mainTxtColor;
         font-family: $mainFont;
         font-weight: 700;
         font-size: 23px;
+        @media screen and (max-width: 1100px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background: $mainTxtColor;
+          transition: .5s ease;
+        }
       }
+      a:hover::before  {
+        width: 100%;
+       }
     }
   }
   h3 {
-    color: $mainTxtColor;
     font-family: $mainFont;
     font-weight: 500;
     font-size: 35px;
     text-align: center;
     margin: 60px 0 0;
+    @media screen and (max-width: 1100px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+    }
   }
   h2 {
     color: $secTxtColor;
@@ -70,63 +184,101 @@ body {
     font-size: 175px;
     text-align: center;
     margin: 0;
+    @media screen and (max-width: 1100px) {
+      font-size: 125px;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 90px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 50px;
+    }
   }
   &__info {
     margin: 350px 0 0 200px;
+    @media screen and (max-width: 1100px) {
+      margin: 350px 0 0 100px;
+    }
+    @media screen and (max-width: 800px) {
+      margin: 450px 0 0 80px;
+    }
     p {
-      color: $mainTxtColor;
       font-family: $mainFont;
       font-weight: 700;
       font-size: 80px;
       margin: 0;
+      @media screen and (max-width: 1100px) {
+        font-size: 60px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 40px;
+      }
     }
     p + p {
       font-weight: 300;
       font-size: 90px;
       margin: 0;
+      @media screen and (max-width: 1100px) {
+        font-size: 70px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 50px;
+      }
     }
     p + p + p {
       font-weight: 300;
       font-size: 21px;
       line-height: 42px;
       margin: 40px 0 30px;
+      @media screen and (max-width: 1100px) {
+        font-size: 17px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 14px;
+      }
     }
-    &__button {
+    &__btn {
       width: 300px;
       height: 80px;
-      border-radius: 30px;
-      color: $secTxtColor;
+      @include btnProp;
       @include flexCentrCentr;
-      background: $btnColor;
-      font-size: 32px;
-      font-family: $mainFont;
-      font-weight: 500;
+      box-shadow: 0 0 10px 2px $effectColor;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      @media screen and (max-width: 1100px) {
+        width: 240px;
+        height: 60px;
+      }
+      @media screen and (max-width: 800px) {
+        width: 180px;
+        height: 50px;
+      }
+      &:hover {
+        background: $secTxtColor;
+        color: $btnColor;
+      }
     }
   }
 }
 .bags {
-  article {
-    font-family: $mainFont;
-    font-weight: 700;
-    font-size: 68px;
-    text-align: center;
-    padding-top: 100px;
-  }
-  p {
-    font-family: $mainFont;
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    line-height: 42px;
-    margin: 50px 0 80px;
-  }
-&__grid {
+  &__grid {
   width: 1500px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 400px 600px 400px;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
+    @media screen and (max-width: 1500px) {
+      gap: 20px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: 710px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 400px;
+    }
   &__item {
     display: flex;
     align-items: center;
@@ -137,6 +289,9 @@ body {
       font-family: $mainFont;
       font-size: 15px;
       font-weight: 400;
+      @media screen and (max-width: 1100px) {
+        font-size: 14px;
+      }
     }
     div {
       @include flexCentrCentr;
@@ -155,40 +310,19 @@ body {
     }
   }
 }
-  &__btn {
-    width: 300px;
-    height: 80px;
-    border-radius: 30px;
-    color: $secTxtColor;
-    @include flexCentrCentr;
-    background: $btnColor;
-    font-size: 32px;
-    font-family: $mainFont;
-    font-weight: 500;
-    margin: 50px auto 20px;
-  }
 }
 .camps {
-  article {
-    font-family: $mainFont;
-    font-weight: 700;
-    font-size: 68px;
-    text-align: center;
-    padding-top: 100px;
-  }
-  p {
-    font-family: $mainFont;
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    line-height: 42px;
-  }
-  &__content {
+  &__grid {
     width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 400px 510px 570px;
     gap: 10px;
+    @media screen and (max-width: 1100px) {
+      width: 600px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
     &__item {
       display: flex;
       align-items: center;
@@ -199,6 +333,9 @@ body {
         font-family: $mainFont;
         font-size: 15px;
         font-weight: 400;
+        @media screen and (max-width: 1100px) {
+          font-size: 14px;
+        }
       }
       div {
         @include flexCentrCentr;
@@ -217,37 +354,14 @@ body {
       }
     }
   }
-  &__btn {
-    width: 300px;
-    height: 80px;
-    border-radius: 30px;
-    color: $secTxtColor;
-    @include flexCentrCentr;
-    background: $btnColor;
-    font-size: 32px;
-    font-family: $mainFont;
-    font-weight: 500;
-    margin: 50px auto 20px;
-  }
 }
 .cameras {
-  article {
-    font-family: $mainFont;
-    font-weight: 700;
-    font-size: 68px;
-    text-align: center;
-    padding-top: 100px;
-  }
-  p {
-    font-family: $mainFont;
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    line-height: 42px;
-  }
   &__slider {
     width: 1600px;
     margin: 0 auto;
+    @media screen and (max-width: 1600px) {
+      width: 550px;
+    }
     &__item {
       height: 700px;
       width: 500px;
@@ -257,7 +371,7 @@ body {
       .img3 {
         margin: 100px 0 110px;
       }
-      h4, div {
+      div, h4 {
         margin: 0 auto;
       }
       h4 {
@@ -266,6 +380,8 @@ body {
         font-family: $mainFont;
         font-size: 15px;
         font-weight: 400;
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
       div {
         @include flexCentrCentr;
@@ -284,43 +400,26 @@ body {
       }
     }
   }
-  &__btn {
-    width: 300px;
-    height: 80px;
-    border-radius: 30px;
-    color: $secTxtColor;
-    @include flexCentrCentr;
-    background: $btnColor;
-    font-size: 32px;
-    font-family: $mainFont;
-    font-weight: 500;
-    margin: 50px auto 20px;
-  }
 }
 .lens {
-  article {
-    font-family: $mainFont;
-    font-weight: 700;
-    font-size: 68px;
-    text-align: center;
-    padding-top: 100px;
-  }
-  p {
-    font-family: $mainFont;
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    line-height: 42px;
-  }
   &__slider {
     width: 1000px;
     margin: 0 auto;
+    @media screen and (max-width: 1100px) {
+      width: 800px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 400px;
+    }
     &__item {
       display: flex;
       align-items: center;
       flex-direction: column;
       img {
         margin: 0 auto;
+        @media screen and (max-width: 800px) {
+          width: 350px;
+        }
       }
       h4 {
         text-align: center;
@@ -347,41 +446,188 @@ body {
       }
     }
   }
-  &__btn {
-    width: 300px;
-    height: 80px;
-    border-radius: 30px;
-    color: $secTxtColor;
-    @include flexCentrCentr;
-    background: $btnColor;
-    font-size: 32px;
-    font-family: $mainFont;
-    font-weight: 500;
-    margin: 50px auto 20px;
-  }
 }
 .sign {
   background: url("../img/sign_bg.jpg") no-repeat;
   height: 1140px;
   &__info {
-    margin: 250px 0 0 50px;
+    padding-top: 450px;
+    margin: 0 0 0 230px;
+    width: 650px;
+    color: $secTxtColor;
+    @media screen and (max-width: 1100px) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 800px) {
+      width: 400px;
+    }
     p {
-    color: $mainTxtColor;
-    font-family: $mainFont;
-    font-weight: 700;
-    font-size: 80px;
-    margin: 50px 0 20px;
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 56px;
+      margin: 0;
+      @media screen and (max-width: 1100px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 30px;
+      }
     }
     p + p {
-    font-weight: 300;
-    font-size: 90px;
-    margin: 50px 0 20px;
+      font-weight: 300;
+      font-size: 52px;
+      margin: 0;
+      @media screen and (max-width: 1100px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 24px;
+      }
     }
     p + p + p {
-    font-weight: 300;
-    font-size: 21px;
-    line-height: 42px;
-    margin: 50px 0 20px;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 30px;
+      margin: 40px 0 50px;
+      @media screen and (max-width: 1100px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 12px;
+      }
     }
+    &__form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input {
+        width: 370px;
+        height: 70px;
+        outline: none;
+        border: none;
+        border-radius: 36px;
+        padding-left: 30px;
+        font-size: 20px;
+        @media screen and (max-width: 1100px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 12px;
+          width: 240px;
+          height: 50px;
+        }
+      }
+      input::placeholder {
+         font-family: $mainFont;
+      }
+      &__btn {
+        width: 200px;
+        height: 70px;
+        @include btnProp;
+        @include flexCentrCentr;
+        box-shadow: 0 0 10px 2px $secTxtColor;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        @media screen and (max-width: 1100px) {
+          width: 160px;
+        }
+        @media screen and (max-width: 1100px) {
+          width: 100px;
+          height: 50px;
+        }
+        &:hover {
+          background: $secTxtColor;
+          color: $btnColor;
+        }
+      }
+    }
+  }
+}
+.footer {
+  height: 700px;
+  @media screen and (max-width: 1200px) {
+    height: 600px;
+  }
+  &__info {
+    width: 1400px;
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media screen and (max-width: 1600px) {
+      width: 1100px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 800px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 450px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-family: $mainFont;
+        font-weight: 700;
+        font-size: 42px;
+        margin: 0 0 30px;
+        @media screen and (max-width: 1200px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 24px;
+        }
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        a {
+          text-decoration: none;
+          color: $mainTxtColor;
+          font-family: $mainFont;
+          font-weight: 500;
+          font-size: 30px;
+          margin: 10px 0;
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+          }
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  p {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 50px 0 40px;
+    text-align: center;
+    @media screen and (max-width: 800px) {
+      font-size: 18px;
+    }
+  }
+  &__social {
+    margin: 30px 0;
+    text-align: center;
+    svg {
+      fill: $effectColor;
+      margin: 0 20px;
+    }
+    a:nth-child(1) svg:hover {
+       fill: #0B84ED;
+    }
+    a:nth-child(2) svg:hover {
+      fill: #D73184;
+    }
+    a:nth-child(3) svg:hover {
+      fill: #0A66C2;
+    }
+    a:nth-child(4) svg:hover {
+       fill: #148AC5;
+     }
   }
 }

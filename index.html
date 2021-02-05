@@ -39,10 +39,10 @@
     </svg>
     <div class="header__navigation">
         <nav>
-            <a href="">TRAVEL BAGS</a>
-            <a href="">CAMPS</a>
-            <a href="">CAMERAS</a>
-            <a href="">CAMERA LENS</a>
+            <a href="#bags">TRAVEL BAGS</a>
+            <a href="#camps">CAMPS</a>
+            <a href="#cameras">CAMERAS</a>
+            <a href="#lens">CAMERA LENS</a>
         </nav>
     </div>
     <h3>FIND EVERYTHING YOU NEED</h3>
@@ -51,12 +51,12 @@
         <p>Best Travel</p>
         <p>ACCESSORIES</p>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the industry's standard</p>
-        <div class="header__info__button">VIEW ALL</div>
+        <div class="header__info__btn">VIEW ALL</div>
     </div>
 </header>
 <main>
     <section class="bags">
-        <article>NEW ARRIVALS</article>
+        <article id="bags">NEW ARRIVALS</article>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <div class="bags__grid">
             <div class="bags__grid__item">
@@ -197,15 +197,14 @@
 		l-9.955,31.064H329.359z"/>
                         </svg></div>
             </div>
-            
         </div>
-        <div class="bags__btn">SEE MORE</div>
+        <div class="content-btn">SEE MORE</div>
     </section>
     <section class="camps">
-        <article>OUR CAMPS</article>
+        <article id="camps">OUR CAMPS</article>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-        <div class="camps__content">
-            <div class="camps__content__item">
+        <div class="camps__grid">
+            <div class="camps__grid__item">
                 <img src="img/camp-1.png" alt="camp-1">
                 <h4>Diswa Quick Setup 4-Person All Season...Standard Tent Quality For 4 persons.</h4>
                 <div><span>$ 67.00</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +227,7 @@
 		l-9.955,31.064H329.359z"/>
                 </svg></div>
             </div>
-            <div class="camps__content__item">
+            <div class="camps__grid__item">
                 <img src="img/camp-2.png" alt="camp-2">
                 <h4>Dealcrox New 2 Person Tent For Camping Waterproof Outdoor Tent/Tent House.</h4>
                 <div><span>$ 67.00</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +250,7 @@
 		l-9.955,31.064H329.359z"/>
                 </svg></div>
             </div>
-            <div class="camps__content__item">
+            <div class="camps__grid__item">
                 <img src="img/camp-3.png" alt="camp-3">
                 <h4>Ozoy Picnic Camping Portable Waterproof Tent For 6 Person/ Camping Dome Tents.</h4>
                 <div><span>$ 67.00</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -275,10 +274,10 @@
                 </svg></div>
             </div>
         </div>
-        <div class="camps__btn">SEE MORE</div>
+        <div class="content-btn">SEE MORE</div>
     </section>
     <section class="cameras">
-        <article>CAMERAS & TRIPOD</article>
+        <article id="cameras">CAMERAS & TRIPOD</article>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <div class="cameras__slider">
             <div class="cameras__slider__item">
@@ -420,10 +419,10 @@
                 </svg></div>
             </div>
         </div>
-        <div class="cameras__btn">SEE MORE</div>
+        <div class="content-btn">SEE MORE</div>
     </section>
     <section class="lens">
-        <article>CAMERA LENS</article>
+        <article id="lens">CAMERA LENS</article>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <div class="lens__slider">
             <div class="lens__slider__item">
@@ -496,52 +495,58 @@
                 </svg></div>
             </div>
         </div>
-        <div class="lens__btn">SEE MORE</div>
+        <div class="content-btn">SEE MORE</div>
     </section>
     <section class="sign">
         <div class="sign__info">
             <p>Sign up for the</p>
             <p>VELTRY NEWSLETTER</p>
             <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-            <form action="/">
+            <form action="/" class="sign__info__form">
                 <label><input type="email" placeholder="Enter Your E-mail"></label>
-                <div>JOIN NOW</div>
+                <div class="sign__info__form__btn">JOIN NOW</div>
             </form>
         </div>
     </section>
 </main>
-<footer>
-    <div>
-        <div>
+<footer class="footer">
+    <div class="footer__info">
+        <div class="footer__info__item">
             <h3>Shop now</h3>
-            <a href="javascript:void(0);">Cameras</a>
-            <a href="javascript:void(0);">Lenses</a>
-            <a href="javascript:void(0);">Camps</a>
-            <a href="javascript:void(0);">Bags</a>
-            <a href="javascript:void(0);">Collections</a>
-            <a href="javascript:void(0);">Gifts</a>
-            <a href="javascript:void(0);">Offers</a>
+            <div>
+                <a href="javascript:void(0);">Cameras</a>
+                <a href="javascript:void(0);">Lenses</a>
+                <a href="javascript:void(0);">Camps</a>
+                <a href="javascript:void(0);">Bags</a>
+                <a href="javascript:void(0);">Collections</a>
+                <a href="javascript:void(0);">Gifts</a>
+                <a href="javascript:void(0);">Offers</a>
+            </div>
         </div>
-        <div>
+        <div class="footer__info__item">
             <h3>About Veltry</h3>
-            <a href="javascript:void(0);">About Us</a>
-            <a href="javascript:void(0);">Veltry Core Values</a>
-            <a href="javascript:void(0);">Affiliate Program</a>
-            <a href="javascript:void(0);">Work With Us</a>
-            <a href="javascript:void(0);">In The Media</a>
+            <div>
+                <a href="javascript:void(0);">About Us</a>
+                <a href="javascript:void(0);">Veltry Core Values</a>
+                <a href="javascript:void(0);">Affiliate Program</a>
+                <a href="javascript:void(0);">Work With Us</a>
+                <a href="javascript:void(0);">In The Media</a>
+            </div>
         </div>
-        <div>
+        <div class="footer__info__item">
             <h3>Help</h3>
-            <a href="javascript:void(0);">Payment Options</a>
-            <a href="javascript:void(0);">Bulk Orders</a>
-            <a href="javascript:void(0);">International Orders</a>
-            <a href="javascript:void(0);">Contact Us</a>
-            <a href="javascript:void(0);">Copyrights</a>
-            <a href="javascript:void(0);">Site Map</a>
+            <div>
+                <a href="javascript:void(0);">Payment Options</a>
+                <a href="javascript:void(0);">Bulk Orders</a>
+                <a href="javascript:void(0);">International Orders</a>
+                <a href="javascript:void(0);">Contact Us</a>
+                <a href="javascript:void(0);">Copyrights</a>
+                <a href="javascript:void(0);">Site Map</a>
+            </div>
         </div>
     </div>
     <p>Made by Evgeniy Galushka. Kramatorsk, 2021.</p>
-    <div class="social">
+    <div class="footer__social">
         <a href="https://www.facebook.com/eugene.galushka" target="_blank">
             <svg class="footer--facebook" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                 <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10h-2v2h2v6h3v-6h1.82l.18-2h-2v-.833c0-.478.096-.667.558-.667h1.442v-2.5h-2.404c-1.798 0-2.596.792-2.596 2.308v1.692z"/>

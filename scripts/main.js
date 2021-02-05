@@ -12,34 +12,39 @@
         //
         // Slick-slider
         $('.cameras__slider').slick({
-            autoplay:true,
-            autoplaySpeed: 5000,
+            // autoplay:true,
+            // autoplaySpeed: 5000,
             arrows:true,
-            // dots: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [{
-                breakpoint: 1250,
+                breakpoint: 1800,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: false
+                    arrows: false,
+                    dots: true
                 }
-                }]
+                },{
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
+                }
+
+            }]
         });
         $('.lens__slider').slick({
             // autoplay:true,
             // autoplaySpeed: 5000,
             arrows:true,
-            // dots: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [{
-                breakpoint: 1250,
+                breakpoint: 1300,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: false
+                    arrows: false,
+                    dots: true
                 }
             }]
         });
