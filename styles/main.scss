@@ -710,7 +710,7 @@ svg {
 }
 .cameras {
   &__slider {
-    width: 1600px;
+    width: 1400px;
     margin: 0 auto;
     @media screen and (max-width: 1600px) {
       width: 550px;
@@ -731,7 +731,7 @@ svg {
         }
       }
       .img3 {
-        margin: 100px 0 110px;
+        margin: 100px auto 110px;
       }
       div, h4 {
         margin: 0 auto;
