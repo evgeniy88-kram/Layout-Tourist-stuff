@@ -24,8 +24,10 @@ $effectColor: #606060;
   @media screen and (max-width: 800px) {
     font-size: 16px;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+  }
 }
-
 * {
   box-sizing: border-box;
 }
@@ -41,7 +43,13 @@ article {
   padding-top: 100px;
   @media screen and (max-width: 1100px) {
     font-size: 48px;
-    padding-top: 40px;
+    padding-top: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 32px;
   }
 }
 article + p {
@@ -54,6 +62,13 @@ article + p {
   @media screen and (max-width: 1100px) {
     font-size: 18px;
     margin: 30px 0 40px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+    margin: 30px 0;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 14px;
   }
 }
 .content-btn {
@@ -76,6 +91,10 @@ article + p {
     width: 180px;
     height: 50px;
   }
+  @media screen and (max-width: 450px) {
+    width: 150px;
+    height: 50px;
+  }
   &:hover {
     background: $secTxtColor;
     color: $btnColor;
@@ -84,26 +103,212 @@ article + p {
 svg {
   cursor: pointer;
 }
+.modal-basket {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  width: 700px;
+  max-height: 800px;
+  margin: 5% auto;
+  background: $secTxtColor;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  color: #000000;
+  overflow: auto;
+  @media screen and (max-width: 1000px) {
+    width: 600px;
+    max-height: 600px;
+  }
+  @media screen and (max-width: 700px) {
+    width: 500px;
+    max-height: 500px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 300px;
+    max-height: 350px;
+  }
+  &__close {
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    @media screen and (max-width: 550px) {
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      right: 10px;
+    }
+    span {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      width: 32px;
+      height: 32px;
+      &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: '';
+        height: 33px;
+        width: 2px;
+        background-color: $btnColor;
+        @media screen and (max-width: 550px) {
+          width: 2px;
+          height: 15px;
+        }
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 490px;
+    @media screen and (max-width: 550px) {
+      min-height: 340px;
+    }
+    h2 {
+      font-family: $mainFont;
+      font-size: 16px;
+      text-align: center;
+      @media screen and (max-width: 1000px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 16px;
+      }
+    }
+    svg {
+      position: absolute;
+      left: -20px;
+      right: 0;
+      margin: 5% auto;
+    }
+    ol {
+      li {
+        font-family: $mainFont;
+        font-weight: 300;
+        font-size: 24px;
+        margin: 0 30px 0 0;
+        border-top: 2px solid #CCCCCC;
+        border-bottom: 2px solid #CCCCCC;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 700px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 12px;
+        }
+        &:hover {
+          font-weight: 600;
+          background: aliceblue;
+        }
+      }
+    }
+    h3 {
+      font-family: $mainFont;
+      font-weight: 300;
+      font-size: 30px;
+      text-align: center;
+      margin-top: 250px;
+      @media screen and (max-width: 1000px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 16px;
+      }
+    }
+    p {
+      font-family: $mainFont;
+      font-weight: 800;
+      font-size: 35px;
+      text-align: center;
+      @media screen and (max-width: 1000px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+    div {
+      display: none;
+      margin: 15px auto 30px;
+      height: 40px;
+      width: 220px;
+      align-items: center;
+      justify-content: center;
+      background: $btnColor;
+      border: 2px inset $btnColor;
+      font-family: $mainFont;
+      font-weight: 500;
+      font-size: 22px;
+      color: #FFFFFF;
+      transition: all 200ms linear;
+      cursor: pointer;
+      @media screen and (max-width: 700px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 12px;
+        width: 150px;
+        height: 35px;
+      }
+      &:hover {
+        background: #FFFFFF;
+        color: $btnColor;
+      }
+    }
+  }
+}
 .header {
   background: url("../img/header_bg.jpg") no-repeat;
   background-size: cover;
-  //height: 1300px;
   position: relative;
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1500px) {
     background: url("../img/header_bg-w1440.jpg") no-repeat;
   }
   @media screen and (max-width: 1100px) {
-    background: url("../img/header_bg-w1100.jpg") no-repeat;
+    background: url("../img/header_bg-w1024.jpg") no-repeat;
+  }
+  @media screen and (max-width: 800px) {
+    background: url("../img/header_bg-w768.jpg") no-repeat;
   }
   &__logo {
     padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       padding-top: 20px;
       justify-content: flex-start;
-      margin-left: 25px;
+      margin-left: 35px;
+      img {
+        height: 90px;
+        @media screen and (max-width: 450px) {
+          height: 60px;
+        }
+      }
     }
   }
   svg {
@@ -114,15 +319,30 @@ svg {
     height: 40px;
     cursor: pointer;
     @media screen and (max-width: 800px) {
-      right: 100px;
+      right: 50px;
       width: 35px;
       height: 35px;
+      top: 40px;
     }
   }
-  svg + svg {
-    right: 100px;
+  &__basket-mark {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 190px;
+    background: $btnColor;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: $secTxtColor;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
     @media screen and (max-width: 800px) {
       right: 40px;
+      width: 25px;
+      height: 25px;
+      top: 30px;
     }
   }
   &__navigation {
@@ -131,7 +351,10 @@ svg {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 60%;
+      width: 50%;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
       a {
         position: relative;
         text-decoration: none;
@@ -140,10 +363,10 @@ svg {
         font-weight: 700;
         font-size: 23px;
         @media screen and (max-width: 1100px) {
-          font-size: 18px;
+          font-size: 16px;
         }
         @media screen and (max-width: 800px) {
-          font-size: 16px;
+          font-size: 14px;
         }
         &::before {
           content: '';
@@ -161,6 +384,84 @@ svg {
        }
     }
   }
+  #hamburger {
+    display: none;
+    & + label {
+      display: none;
+      width: 42px;
+      height: 42px;
+      @media screen and (max-width: 800px) {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: 40px auto;
+      }
+      span {
+        width: 30px;
+        height: 3px;
+        background: $mainTxtColor;
+        display: block;
+        position: relative;
+        margin: auto;
+        transition: .5s;
+        &:before, &:after {
+          transition: .5s;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          display: block;
+          background: $mainTxtColor;
+        }
+        &:before {
+          top: -10px;
+        }
+        &:after {
+          bottom: -10px;
+        }
+      }
+    }
+    &:checked + label {
+      span {
+        background: transparent;
+        transform: rotate(180deg);
+        &:before, &:after {
+          top: 50%;
+          bottom: initial;
+          width: 110%;
+          background: $mainTxtColor;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    height: 160px;
+    top: 80px;
+    right: 0;
+    left: 0;
+    margin: 20px auto;
+    background: $secTxtColor;
+    overflow: auto;
+    z-index: 0;
+    a {
+      margin: 10px 0;
+    }
+  }
   h3 {
     font-family: $mainFont;
     font-weight: 500;
@@ -172,9 +473,14 @@ svg {
     }
     @media screen and (max-width: 800px) {
       font-size: 24px;
+      margin: 30px 0 0;
     }
     @media screen and (max-width: 600px) {
       font-size: 14px;
+      color: $secTxtColor;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 12px;
     }
   }
   h2 {
@@ -185,22 +491,31 @@ svg {
     text-align: center;
     margin: 0;
     @media screen and (max-width: 1100px) {
-      font-size: 125px;
+      font-size: 100px;
     }
     @media screen and (max-width: 800px) {
-      font-size: 90px;
+      font-size: 55px;
     }
     @media screen and (max-width: 600px) {
       font-size: 50px;
     }
+    @media screen and (max-width: 450px) {
+      font-size: 40px;
+    }
   }
   &__info {
     margin: 350px 0 0 200px;
+    @media screen and (max-width: 1500px) {
+      margin: 200px 0 0 100px;
+    }
     @media screen and (max-width: 1100px) {
-      margin: 350px 0 0 100px;
+      margin: 100px 0 0 100px;
     }
     @media screen and (max-width: 800px) {
-      margin: 450px 0 0 80px;
+      margin: 120px 0 0 80px;
+    }
+    @media screen and (max-width: 450px) {
+      margin: 150px auto 0 50px;
     }
     p {
       font-family: $mainFont;
@@ -213,6 +528,9 @@ svg {
       @media screen and (max-width: 800px) {
         font-size: 40px;
       }
+      @media screen and (max-width: 450px) {
+        font-size: 30px;
+      }
     }
     p + p {
       font-weight: 300;
@@ -224,6 +542,9 @@ svg {
       @media screen and (max-width: 800px) {
         font-size: 50px;
       }
+      @media screen and (max-width: 450px) {
+        font-size: 35px;
+      }
     }
     p + p + p {
       font-weight: 300;
@@ -232,9 +553,15 @@ svg {
       margin: 40px 0 30px;
       @media screen and (max-width: 1100px) {
         font-size: 17px;
+        line-height: 20px;
       }
       @media screen and (max-width: 800px) {
         font-size: 14px;
+        margin: 30px 0;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 11px;
+        margin: 20px 0;
       }
     }
     &__btn {
@@ -251,6 +578,10 @@ svg {
       }
       @media screen and (max-width: 800px) {
         width: 180px;
+        height: 50px;
+      }
+      @media screen and (max-width: 450px) {
+        width: 150px;
         height: 50px;
       }
       &:hover {
@@ -279,10 +610,18 @@ svg {
     @media screen and (max-width: 800px) {
       width: 400px;
     }
+    @media screen and (max-width: 450px) {
+      width: 300px;
+    }
   &__item {
     display: flex;
     align-items: center;
     flex-direction: column;
+    img {
+      @media screen and (max-width: 450px) {
+        width: 220px;
+      }
+    }
     h4 {
       text-align: center;
       width: 80%;
@@ -291,6 +630,9 @@ svg {
       font-weight: 400;
       @media screen and (max-width: 1100px) {
         font-size: 14px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 12px;
       }
     }
     div {
@@ -303,7 +645,7 @@ svg {
       }
       span {
         font-family: $mainFont;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 700;
         margin-right: 20px;
       }
@@ -319,14 +661,22 @@ svg {
     grid-template-columns: 400px 510px 570px;
     gap: 10px;
     @media screen and (max-width: 1100px) {
-      width: 600px;
+      width: 590px;
       grid-template-columns: 1fr;
       gap: 30px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 300px;
     }
     &__item {
       display: flex;
       align-items: center;
       flex-direction: column;
+      img {
+        @media screen and (max-width: 450px) {
+          width: 280px;
+        }
+      }
       h4 {
         text-align: center;
         width: 80%;
@@ -335,6 +685,9 @@ svg {
         font-weight: 400;
         @media screen and (max-width: 1100px) {
           font-size: 14px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 12px;
         }
       }
       div {
@@ -347,7 +700,7 @@ svg {
         }
         span {
           font-family: $mainFont;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 700;
           margin-right: 20px;
         }
@@ -362,11 +715,20 @@ svg {
     @media screen and (max-width: 1600px) {
       width: 550px;
     }
+    @media screen and (max-width: 450px) {
+      width: 310px;
+    }
     &__item {
       height: 700px;
       width: 500px;
+      @media screen and (max-width: 450px) {
+        width: 300px;
+      }
       img {
         margin: 0 auto;
+        @media screen and (max-width: 450px) {
+          width: 300px;
+        }
       }
       .img3 {
         margin: 100px 0 110px;
@@ -382,6 +744,12 @@ svg {
         font-weight: 400;
         padding-top: 30px;
         padding-bottom: 30px;
+        @media screen and (max-width: 1100px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 12px;
+        }
       }
       div {
         @include flexCentrCentr;
@@ -393,7 +761,7 @@ svg {
         }
         span {
           font-family: $mainFont;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 700;
           margin-right: 20px;
         }
@@ -411,14 +779,23 @@ svg {
     @media screen and (max-width: 800px) {
       width: 400px;
     }
+    @media screen and (max-width: 450px) {
+      width: 310px;
+    }
     &__item {
       display: flex;
       align-items: center;
       flex-direction: column;
+      @media screen and (max-width: 800px) {
+        width: 280px;
+      }
       img {
         margin: 0 auto;
         @media screen and (max-width: 800px) {
           width: 350px;
+        }
+        @media screen and (max-width: 450px) {
+          width: 250px;
         }
       }
       h4 {
@@ -428,6 +805,12 @@ svg {
         font-size: 15px;
         font-weight: 400;
         margin: 50px auto 20px;
+        @media screen and (max-width: 1100px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 12px;
+        }
       }
       div {
         @include flexCentrCentr;
@@ -439,7 +822,7 @@ svg {
         }
         span {
           font-family: $mainFont;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 700;
           margin-right: 20px;
         }
@@ -449,28 +832,53 @@ svg {
 }
 .sign {
   background: url("../img/sign_bg.jpg") no-repeat;
-  height: 1140px;
+  background-size: cover;
+  @media screen and (max-width: 1500px) {
+    background: url("../img/sign_bg-w1440.jpg") no-repeat;
+  }
+  @media screen and (max-width: 1100px) {
+    background: url("../img/sign_bg-w1024.jpg") no-repeat;
+  }
+  @media screen and (max-width: 800px) {
+    background: url("../img/sign_bg-w768.jpg") no-repeat;
+  }
   &__info {
     padding-top: 450px;
+    padding-bottom: 200px;
     margin: 0 0 0 230px;
     width: 650px;
     color: $secTxtColor;
+    @media screen and (max-width: 1500px) {
+      margin: 0 auto;
+      padding-top: 240px;
+      padding-bottom: 100px;
+    }
     @media screen and (max-width: 1100px) {
       margin: 0 auto;
+      padding-top: 200px;
+      padding-bottom: 100px;
     }
     @media screen and (max-width: 800px) {
       width: 400px;
+      padding-top: 145px;
+      padding-bottom: 50px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 300px;
     }
     p {
       font-family: $mainFont;
       font-weight: 700;
       font-size: 56px;
-      margin: 0;
+      margin: 0 0 20px;
       @media screen and (max-width: 1100px) {
-        font-size: 40px;
+        font-size: 48px;
       }
       @media screen and (max-width: 800px) {
-        font-size: 30px;
+        font-size: 32px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 28px;
       }
     }
     p + p {
@@ -478,10 +886,13 @@ svg {
       font-size: 52px;
       margin: 0;
       @media screen and (max-width: 1100px) {
-        font-size: 32px;
+        font-size: 30px;
       }
       @media screen and (max-width: 800px) {
-        font-size: 24px;
+        font-size: 22px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 18px;
       }
     }
     p + p + p {
@@ -490,10 +901,16 @@ svg {
       line-height: 30px;
       margin: 40px 0 50px;
       @media screen and (max-width: 1100px) {
-        font-size: 14px;
+        font-size: 13px;
+        margin: 20px 0;
       }
       @media screen and (max-width: 800px) {
         font-size: 12px;
+        line-height: 20px;
+        margin: 15px 0;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 11px;
       }
     }
     &__form {
@@ -513,8 +930,12 @@ svg {
         }
         @media screen and (max-width: 800px) {
           font-size: 12px;
-          width: 240px;
-          height: 50px;
+          width: 250px;
+          height: 40px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 11px;
+          width: 170px;
         }
       }
       input::placeholder {
@@ -531,9 +952,12 @@ svg {
         @media screen and (max-width: 1100px) {
           width: 160px;
         }
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 800px) {
+          width: 120px;
+          height: 40px;
+        }
+        @media screen and (max-width: 800px) {
           width: 100px;
-          height: 50px;
         }
         &:hover {
           background: $secTxtColor;
@@ -544,10 +968,6 @@ svg {
   }
 }
 .footer {
-  height: 700px;
-  @media screen and (max-width: 1200px) {
-    height: 600px;
-  }
   &__info {
     width: 1400px;
     padding-top: 60px;
@@ -562,7 +982,10 @@ svg {
       width: 800px;
     }
     @media screen and (max-width: 800px) {
-      width: 450px;
+      width: 440px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 300px;
     }
     &__item {
       display: flex;
@@ -577,6 +1000,9 @@ svg {
         }
         @media screen and (max-width: 800px) {
           font-size: 24px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 14px;
         }
       }
       div {
@@ -596,6 +1022,9 @@ svg {
           @media screen and (max-width: 800px) {
             font-size: 14px;
           }
+          @media screen and (max-width: 450px) {
+            font-size: 11px;
+          }
         }
       }
     }
@@ -609,6 +1038,9 @@ svg {
     @media screen and (max-width: 800px) {
       font-size: 18px;
     }
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+    }
   }
   &__social {
     margin: 30px 0;
@@ -616,6 +1048,13 @@ svg {
     svg {
       fill: $effectColor;
       margin: 0 20px;
+      @media screen and (max-width: 800px) {
+        margin: 0 15px;
+      }
+      @media screen and (max-width: 450px) {
+        width: 35px;
+        height: 35px;
+      }
     }
     a:nth-child(1) svg:hover {
        fill: #0B84ED;
@@ -630,4 +1069,14 @@ svg {
        fill: #148AC5;
      }
   }
+}
+.dark-background {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
