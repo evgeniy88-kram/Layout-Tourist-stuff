@@ -127,7 +127,7 @@ svg {
   display: none;
   position: fixed;
   z-index: 4;
-  width: 700px;
+  width: 1000px;
   max-height: 800px;
   margin: 5% auto;
   background: #ffffff;
@@ -136,24 +136,6 @@ svg {
   right: 0;
   color: #000000;
   overflow: auto;
-}
-@media screen and (max-width: 1000px) {
-  .modal-basket {
-    width: 600px;
-    max-height: 600px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .modal-basket {
-    width: 500px;
-    max-height: 500px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .modal-basket {
-    width: 300px;
-    max-height: 350px;
-  }
 }
 .modal-basket__close {
   border-radius: 50%;
@@ -201,7 +183,6 @@ svg {
 }
 .modal-basket__content {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   min-height: 490px;
 }
@@ -212,7 +193,7 @@ svg {
 }
 .modal-basket__content h2 {
   font-family: "Signika", sans-serif;
-  font-size: 16px;
+  font-size: 36px;
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
@@ -236,32 +217,6 @@ svg {
   right: 0;
   margin: 5% auto;
 }
-.modal-basket__content ol li {
-  font-family: "Signika", sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  margin: 0 30px 0 0;
-  border-top: 2px solid #CCCCCC;
-  border-bottom: 2px solid #CCCCCC;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-@media screen and (max-width: 700px) {
-  .modal-basket__content ol li {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .modal-basket__content ol li {
-    font-size: 12px;
-  }
-}
-.modal-basket__content ol li:hover {
-  font-weight: 600;
-  background: aliceblue;
-}
 .modal-basket__content h3 {
   font-family: "Signika", sans-serif;
   font-weight: 300;
@@ -284,58 +239,20 @@ svg {
     font-size: 16px;
   }
 }
-.modal-basket__content p {
-  font-family: "Signika", sans-serif;
-  font-weight: 800;
-  font-size: 35px;
-  text-align: center;
-}
-@media screen and (max-width: 1000px) {
-  .modal-basket__content p {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .modal-basket__content p {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .modal-basket__content p {
-    font-size: 14px;
-  }
+.modal-basket__content section {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 10% 3% 10% 3% 14%;
 }
 .modal-basket__content div {
-  display: none;
-  margin: 15px auto 30px;
-  height: 40px;
-  width: 220px;
+  width: 100%;
+  height: 50px;
+  font-family: "Signika", sans-serif;
+  font-size: 24px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: #3ACDD5;
-  border: 2px inset #3ACDD5;
-  font-family: "Signika", sans-serif;
-  font-weight: 500;
-  font-size: 22px;
-  color: #FFFFFF;
-  transition: all 200ms linear;
-  cursor: pointer;
-}
-@media screen and (max-width: 700px) {
-  .modal-basket__content div {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .modal-basket__content div {
-    font-size: 12px;
-    width: 150px;
-    height: 35px;
-  }
-}
-.modal-basket__content div:hover {
-  background: #FFFFFF;
-  color: #3ACDD5;
 }
 
 .header {
