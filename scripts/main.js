@@ -322,5 +322,24 @@
             $('#lens3-5').css('background', '#3ACDD5').text(`+`);
             $('#lens3-6').text(`${lensInfo[2].quantity * lensInfo[2].price} $`);
         });
+
+        btnOpenModal.on('click', function (){
+
+
+            $('#basketSum').text('Сумма Вашей покупки: ' + sumTotal + '$');
+        });
+
+
+        // function arraySum(array){
+        //     let sum = 0;
+        //     for(let i = 0; i < array.length; i++){
+        //         sum += array[i];
+        //     }
+        //     if (numbClicks > 0) {
+        //         $('.modal__bag__content p').html('Сумма Вашей покупки: ' + sum +' $');
+        //         $('.modal__bag__content__btn').css('display','flex');
+        //     }
+        // }
+
     });
 })(jQuery);
