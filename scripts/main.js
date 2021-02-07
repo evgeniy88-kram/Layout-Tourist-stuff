@@ -96,7 +96,7 @@
                 {name: 'Nasher Miles Santorini PP Hard-Sided Luggage Set', price: 67.00, quantity: 1},
                 {name: 'Nasher Miles Santorini PP Hard-Sided Check-In Luggage Bag', price: 73.00, quantity: 1},
                 {name: 'American Tourister X-Bags Casual 2 Fabric', price: 79.00, quantity: 1}
-            ]
+            ];
             // campsInfo = [
             //     {name: 'Diswa Quick Setup 4-Person All Season', price: 67.00, quantity: 1},
             //     {name: 'Dealcrox New 2 Person Tent', price: 67.00, quantity: 1},
@@ -116,21 +116,21 @@
         $('.bags__grid__item:nth-child(1) svg').one('click', function(){
             baskCont.push(bagsInfo[0]);
         });
-        $('.bags__grid__item:nth-child(2) svg').one('click', function(){
-            baskCont.push(bagsInfo[1]);
-        });
-        $('.bags__grid__item:nth-child(3) svg').one('click', function(){
-            baskCont.push(bagsInfo[2]);
-        });
-        $('.bags__grid__item:nth-child(4) svg').one('click', function(){
-            baskCont.push(bagsInfo[3]);
-        });
-        $('.bags__grid__item:nth-child(5) svg').one('click', function(){
-            baskCont.push(bagsInfo[4]);
-        });
-        $('.bags__grid__item:nth-child(6) svg').one('click', function(){
-            baskCont.push(bagsInfo[5]);
-        });
+        // $('.bags__grid__item:nth-child(2) svg').one('click', function(){
+        //     baskCont.push(bagsInfo[1]);
+        // });
+        // $('.bags__grid__item:nth-child(3) svg').one('click', function(){
+        //     baskCont.push(bagsInfo[2]);
+        // });
+        // $('.bags__grid__item:nth-child(4) svg').one('click', function(){
+        //     baskCont.push(bagsInfo[3]);
+        // });
+        // $('.bags__grid__item:nth-child(5) svg').one('click', function(){
+        //     baskCont.push(bagsInfo[4]);
+        // });
+        // $('.bags__grid__item:nth-child(6) svg').one('click', function(){
+        //     baskCont.push(bagsInfo[5]);
+        // });
         btnOpenModal.one('click', function(){
             for (i = 1; i < 7; i++) {
                 $('.modal-basket__content section').append('<div></div>');
@@ -138,9 +138,9 @@
             $('.modal-basket__content section div:nth-child(1)').text(`${baskCont[0].name}`);
             $('.modal-basket__content section div:nth-child(2)').text(`${baskCont[0].price} $`);
             $('.modal-basket__content section div:nth-child(3)').css('background', '#3ACDD5').text(`-`);
-            $('.modal-basket__content div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
-            $('.modal-basket__content div:nth-child(5)').css('background', '#3ACDD5').text(`+`);
-            $('.modal-basket__content div:nth-child(6)').text(`${baskCont[0].quantity * baskCont[0].price} $`);
+            $('.modal-basket__content section div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
+            $('.modal-basket__content section div:nth-child(5)').css('background', '#3ACDD5').text(`+`);
+            $('.modal-basket__content section div:nth-child(6)').text(`${baskCont[0].quantity * baskCont[0].price} $`);
         });
         $('.modal-basket__content section div:nth-child(3)').on('click', function (){
             if (baskCont[0].quantity > 1) {
@@ -149,7 +149,7 @@
         });
         $('.modal-basket__content section div:nth-child(5)').on('click', function (){
                 baskCont[0].quantity++;
-            $('.modal-basket__content div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
+            $('.modal-basket__content section div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
             console.log(baskCont[0].quantity);
         });
 
