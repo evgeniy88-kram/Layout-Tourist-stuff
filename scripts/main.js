@@ -112,25 +112,30 @@
             //     {name: 'Nikon AF 70-300mm f/4-5.6G Telephoto Zoom Lens', price: 327.00, quantity: 1},
             //     {name: 'Yongnuo_ EF YN 50mm F/1.8 1:1.8 Standard Prime Lens', price: 450.00, quantity: 1}
             //     ];
-
-        $('.bags__grid__item:nth-child(1) svg').one('click', function(){
+        // for (j = 1; j < 7; j++) {
+        //     $(`.bags__grid__item:nth-child(${j}) svg`).one('click', function(){
+        //         baskCont.push(bagsInfo[j-1]);
+        //     });
+        // }console.log(baskCont);
+        $(`.bags__grid__item:nth-child(1) svg`).one('click', function(){
             baskCont.push(bagsInfo[0]);
         });
-        // $('.bags__grid__item:nth-child(2) svg').one('click', function(){
-        //     baskCont.push(bagsInfo[1]);
-        // });
-        // $('.bags__grid__item:nth-child(3) svg').one('click', function(){
-        //     baskCont.push(bagsInfo[2]);
-        // });
-        // $('.bags__grid__item:nth-child(4) svg').one('click', function(){
-        //     baskCont.push(bagsInfo[3]);
-        // });
-        // $('.bags__grid__item:nth-child(5) svg').one('click', function(){
-        //     baskCont.push(bagsInfo[4]);
-        // });
-        // $('.bags__grid__item:nth-child(6) svg').one('click', function(){
-        //     baskCont.push(bagsInfo[5]);
-        // });
+        $(`.bags__grid__item:nth-child(2) svg`).one('click', function(){
+            baskCont.push(bagsInfo[1]);
+        });
+        $(`.bags__grid__item:nth-child(3) svg`).one('click', function(){
+            baskCont.push(bagsInfo[2]);
+        });
+        $(`.bags__grid__item:nth-child(4) svg`).one('click', function(){
+            baskCont.push(bagsInfo[3]);
+        });
+        $(`.bags__grid__item:nth-child(5) svg`).one('click', function(){
+            baskCont.push(bagsInfo[4]);
+        });
+        $(`.bags__grid__item:nth-child(6) svg`).one('click', function(){
+            baskCont.push(bagsInfo[5]);
+        });
+
         btnOpenModal.one('click', function(){
             for (i = 1; i < 7; i++) {
                 $('.modal-basket__content section').append('<div></div>');
@@ -141,17 +146,17 @@
             $('.modal-basket__content section div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
             $('.modal-basket__content section div:nth-child(5)').css('background', '#3ACDD5').text(`+`);
             $('.modal-basket__content section div:nth-child(6)').text(`${baskCont[0].quantity * baskCont[0].price} $`);
-        });
-        $('.modal-basket__content section div:nth-child(3)').on('click', function (){
-            if (baskCont[0].quantity > 1) {
-                baskCont[0].quantity -= 1;
+            for (i = 1; i < 7; i++) {
+                $('.modal-basket__content section').append('<div></div>');
             }
+            $('.modal-basket__content section div:nth-child(7)').text(`${baskCont[1].name}`);
+            $('.modal-basket__content section div:nth-child(8)').text(`${baskCont[1].price} $`);
+            $('.modal-basket__content section div:nth-child(9)').css('background', '#3ACDD5').text(`-`);
+            $('.modal-basket__content section div:nth-child(10)').text(`${baskCont[1].quantity} шт`);
+            $('.modal-basket__content section div:nth-child(11)').css('background', '#3ACDD5').text(`+`);
+            $('.modal-basket__content section div:nth-child(12)').text(`${baskCont[1].quantity * baskCont[1].price} $`);
         });
-        $('.modal-basket__content section div:nth-child(5)').on('click', function (){
-                baskCont[0].quantity++;
-            $('.modal-basket__content section div:nth-child(4)').text(`${baskCont[0].quantity} шт`);
-            console.log(baskCont[0].quantity);
-        });
+
 
     });
 })(jQuery);
