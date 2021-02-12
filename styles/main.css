@@ -436,7 +436,7 @@ svg {
 .header #hamburger:checked + label span:after {
   transform: rotate(-45deg);
 }
-.header .nav-list {
+.header .nav__list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -452,7 +452,7 @@ svg {
   overflow: auto;
   z-index: 0;
 }
-.header .nav-list a {
+.header .nav__list a {
   margin: 10px 0;
 }
 .header h3 {

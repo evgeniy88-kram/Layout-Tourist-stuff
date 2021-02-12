@@ -2,11 +2,11 @@
     $(function (){
         // Toggle mobile-menu
         $('header label').on('click', function () {
-            $('nav').toggleClass('nav-list');
+            $('nav').toggleClass('nav__list');
         });
         //Hide toggle-menu
         $('nav a').on('click', function (){
-            $('nav').toggleClass('nav-list');
+            $('nav').toggleClass('nav__list');
             $('#hamburger').prop('checked', false);
         });
         //
